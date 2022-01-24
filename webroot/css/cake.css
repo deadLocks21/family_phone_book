@@ -219,3 +219,6 @@ th {
         content: " \2190";
     }
 }
+html, body, main, .container {
+    height: 100% !important;
+}

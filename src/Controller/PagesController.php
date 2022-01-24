@@ -20,6 +20,7 @@ use Cake\Core\Configure;
 use Cake\Http\Exception\ForbiddenException;
 use Cake\Http\Exception\NotFoundException;
 use Cake\Http\Response;
+use Cake\I18n\FrozenTime;
 use Cake\View\Exception\MissingTemplateException;
 
 /**
@@ -31,6 +32,17 @@ use Cake\View\Exception\MissingTemplateException;
  */
 class PagesController extends AppController
 {
+    public function login()
+    {
+        if ($this->request->is('post')) {
+            if($this->request->getData('password') == Configure::consume('AccessPassword')) {
+                $this->request->getSession()->write('connected', true);
+                $this->request->getSession()->write('dateOfDeconnection', date('Y-m-d H:i:s', strtotime('+1 hour')));
+                $this->redirect('/', 200);
+            }
+        }
+    }
+
     /**
      * Displays a view
      *

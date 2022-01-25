@@ -8,7 +8,7 @@
     <?php foreach ($contacts as $contact) : ?>
         <a href="/family_phone_book/contacts/view/<?= $contact->id ?>" class="content margin-bottom w-90-p">
             <h3><?= h($contact->name) ?></h3>
-            <h4><?= h($contact->mail) ?></h4>
+            <h4 style="line-break: anywhere;"><?= h($contact->mail) ?></h4>
             <h4><?= str_replace("\n", "<br>", h($contact->address)) ?></h4>
         </a>
     <?php endforeach; ?>

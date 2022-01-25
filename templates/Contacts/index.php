@@ -1,6 +1,6 @@
 <?= $this->Html->css(['index']) ?>
 <div class="contacts index content">
-    <?= $this->Html->link(__('+'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <a href="/family_phone_book/contacts/add" class="button float-right"><h3 style="color: white;">+</h3></a>
     <h3><?= __('Contacts') ?></h3>
 </div>
 <!-- <div style="background-color: white; z-index: 10;height: 7em; display:block;"></div> -->

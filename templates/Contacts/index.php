@@ -1,7 +1,7 @@
 <?= $this->Html->css(['index']) ?>
 <div class="contacts index content">
-    <?= $this->Html->link(__('Nouveau contact'), ['action' => 'add'], ['class' => 'button float-right']) ?>
-    <h4><?= __('Contacts') ?></h4>
+    <?= $this->Html->link(__('+'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <h3><?= __('Contacts') ?></h3>
 </div>
 <!-- <div style="background-color: white; z-index: 10;height: 7em; display:block;"></div> -->
 <div class="tiles-container">

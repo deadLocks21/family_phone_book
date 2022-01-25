@@ -47,7 +47,7 @@ if (!Configure::read('debug')) :
     );
 endif;
 
-$cakeDescription = 'CakePHP: the rapid development PHP framework';
+$cakeDescription = 'Annuaire familial';
 ?>
 <!DOCTYPE html>
 <html>

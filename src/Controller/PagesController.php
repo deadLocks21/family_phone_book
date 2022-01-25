@@ -38,7 +38,7 @@ class PagesController extends AppController
             if($this->request->getData('password') == Configure::consume('AccessPassword')) {
                 $this->request->getSession()->write('connected', true);
                 $this->request->getSession()->write('dateOfDeconnection', date('Y-m-d H:i:s', strtotime('+1 hour')));
-                $this->redirect('/contacts/add', 200);
+                $this->redirect('/contacts', 200);
             }
         }
     }

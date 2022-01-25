@@ -13,7 +13,7 @@
             </div>
             <div class="flex-row-center margin-top">
                 <a href="/contacts">
-                    <?= $this->Form->button('Annuler', ['type' => 'button']) ?>
+                    <?= $this->Form->button('Retour', ['type' => 'button']) ?>
                 </a>
                 <a href="/contacts/edit/<?= $contact->id ?>">
                     <?= $this->Form->button('Modifier', ['type' => 'submit']) ?>

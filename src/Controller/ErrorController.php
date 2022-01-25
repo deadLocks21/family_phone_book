@@ -58,7 +58,7 @@ class ErrorController extends AppController
         parent::beforeRender($event);
 
         if ($event->getSubject()->getResponse()->getStatusCode() == 401) {
-            $this->redirect('/login', 200);
+            $this->redirect('/family_phone_book/login', 200);
         }
     }
 

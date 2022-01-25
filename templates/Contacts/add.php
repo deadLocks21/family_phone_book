@@ -5,13 +5,22 @@
             <?= $this->Form->create($contact) ?>
             <fieldset>
                 <?php
-                    echo $this->Form->control('name', ['label' => 'Nom, prénom, famile, ...']);
-                    echo $this->Form->control('mail', ['label' => 'Adresse mail']);
-                    echo $this->Form->control('address', ['label' => 'Adresse postale']);
+                echo $this->Form->control('name', ['label' => 'Nom, prénom, famile, ...']);
+                echo $this->Form->control('mail', ['label' => 'Adresse mail']);
+                echo $this->Form->control('address', ['label' => 'Adresse postale']);
                 ?>
             </fieldset>
-            <?= $this->Form->button('Envoyer') ?>
+            <div class="flex-row-center">
+                <a href="/contacts">
+                    <?= $this->Form->button('Annuler', ['type' => 'button']) ?>
+                </a>
+                <?= $this->Form->button('Envoyer', ['type' => 'submit']) ?>
+            </div>
             <?= $this->Form->end() ?>
         </div>
     </div>
 </div>
+<script>
+    var Searchtxt = document.getElementById("txtSearch").value();
+    window.location = "http://www.example.com/search/?Query=" + Searchtxt;
+</script>

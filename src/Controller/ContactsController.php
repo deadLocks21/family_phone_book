@@ -11,17 +11,17 @@ namespace App\Controller;
  */
 class ContactsController extends AppController
 {
-    // /**
-    //  * Index method
-    //  *
-    //  * @return \Cake\Http\Response|null|void Renders view
-    //  */
-    // public function index()
-    // {
-    //     $contacts = $this->paginate($this->Contacts);
+    /**
+     * Index method
+     *
+     * @return \Cake\Http\Response|null|void Renders view
+     */
+    public function index()
+    {
+        $contacts = $this->paginate($this->Contacts);
 
-    //     $this->set(compact('contacts'));
-    // }
+        $this->set(compact('contacts'));
+    }
 
     // /**
     //  * View method

@@ -34,6 +34,8 @@ class PagesController extends AppController
 {
     public function login()
     {
+        $this->request->getSession()->write('connected', false);
+        $this->request->getSession()->write('dateOfDeconnection', null);
         if ($this->request->is('post')) {
             if($this->request->getData('password') == Configure::consume('AccessPassword')) {
                 $this->request->getSession()->write('connected', true);

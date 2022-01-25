@@ -1,33 +1,21 @@
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\Contact $contact
- */
-?>
+<?= $this->Html->css(['edit']) ?>
 <div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $contact->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $contact->id), 'class' => 'side-nav-item']
-            ) ?>
-            <?= $this->Html->link(__('List Contacts'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
-    <div class="column-responsive column-80">
+    <div class="column-responsive column-100">
         <div class="contacts form content">
             <?= $this->Form->create($contact) ?>
             <fieldset>
-                <legend><?= __('Edit Contact') ?></legend>
                 <?php
-                    echo $this->Form->control('name');
-                    echo $this->Form->control('mail');
-                    echo $this->Form->control('address');
+                echo $this->Form->control('name', ['label' => 'Nom, prénom, famile, ...']);
+                echo $this->Form->control('mail', ['label' => 'Adresse mail']);
+                echo $this->Form->control('address', ['label' => 'Adresse postale']);
                 ?>
             </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
+            <div class="flex-row-center">
+                <a href="/contacts/view/<?= $contact->id ?>">
+                    <?= $this->Form->button('Annuler', ['type' => 'button']) ?>
+                </a>
+                <?= $this->Form->button('Envoyer', ['type' => 'submit']) ?>
+            </div>
             <?= $this->Form->end() ?>
         </div>
     </div>

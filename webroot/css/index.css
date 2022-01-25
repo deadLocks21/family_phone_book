@@ -1,0 +1,32 @@
+.container {
+    padding: 0 ! important;
+    margin: 0 ! important;
+    max-width: none !important;
+}
+.index {
+    top: 1em;
+    position: fixed;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+.index > a, .index > h3 {
+    margin-bottom: 0;
+}
+.tiles-container {
+    margin-top: 7em !important;
+    margin: 0 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.margin-bottom {
+    margin-bottom: 1em;
+}
+.w-90-p {
+    width: 90%;
+}

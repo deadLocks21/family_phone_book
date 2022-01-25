@@ -11,7 +11,7 @@
                 ?>
             </fieldset>
             <div class="flex-row-center">
-                <a href="/contacts">
+                <a href="/family_phone_book/contacts">
                     <?= $this->Form->button('Annuler', ['type' => 'button']) ?>
                 </a>
                 <?= $this->Form->button('Envoyer', ['type' => 'submit']) ?>

@@ -12,10 +12,10 @@
                 </blockquote>
             </div>
             <div class="flex-row-center margin-top">
-                <a href="/contacts">
+                <a href="/family_phone_book/contacts">
                     <?= $this->Form->button('Retour', ['type' => 'button']) ?>
                 </a>
-                <a href="/contacts/edit/<?= $contact->id ?>">
+                <a href="/family_phone_book/contacts/edit/<?= $contact->id ?>">
                     <?= $this->Form->button('Modifier', ['type' => 'submit']) ?>
                 </a>
             </div>
